@@ -8,9 +8,14 @@ public class IntToBin {
 
     /** Returns the binary representation of the given integer, as a string of 0's and 1's.  */
     public static String toBinary(int x) {
-        if(x == 0) return "";
+        if(x == 1 || x == 0) return x + "";
         return toBinary(x/2) + (x%2);
     }
 
-
  }
+
+
+//  x/2=5 + 10%2=0
+//  x/2=2 + 5%2=1
+//  x/2=1 + 2%2 = 0
+//  x/2=0 + 1%2 = 1
