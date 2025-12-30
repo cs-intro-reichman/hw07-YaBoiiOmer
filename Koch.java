@@ -54,14 +54,14 @@ public class Koch {
 			return;
 		}
 
-		double dx = x2 - x1;
-		double dy = y2 - y1;
+		double dx = (x2 - x1);
+		double dy = (y2 - y1);
 
 		double x3 = x1 + dx / 3;
 		double y3 = y1 + dy / 3;
 
-		double x4 = x1 + 2 * dx / 3;
-		double y4 = y1 + 2 * dy / 3;
+		double x4 = x1 + (2 * dx) / 3;
+		double y4 = y1 + (2 * dy) / 3;
 
 		double x5 = (Math.sqrt(3)/2)*(y3 - y4) + 0.5*(x3 + x4);
 		double y5 = (Math.sqrt(3)/2)*(x4 - x3) + 0.5*(y3 + y4);
@@ -77,12 +77,12 @@ public class Koch {
     /** Gets n, and draws a Koch snowflake of n edges in the standard canvass. */
 	public static void snowFlake(int n) {
 
-		double[] a = {0.25, 0.55};
-		double[] b = {0.75, 0.55};
+		double[] a = {0.25, 0.65};
+		double[] b = {0.75, 0.65};
 		double[] c = {0.5, 0.25};
 
 		curve(n, a[0], a[1], b[0], b[1]);
-		curve(n, a[0], a[1], c[0], c[1]);
+		curve(n, c[0], c[1], a[0], a[1]);
 		curve(n, b[0], b[1], c[0], c[1]);
 
 
