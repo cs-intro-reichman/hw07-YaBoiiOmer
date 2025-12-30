@@ -82,8 +82,8 @@ public class Koch {
 		double[] c = {0.5, 0.25};
 
 		curve(n, a[0], a[1], b[0], b[1]);
-		curve(n, c[0], c[1], a[0], a[1]);
 		curve(n, b[0], b[1], c[0], c[1]);
+		curve(n, c[0], c[1], a[0], a[1]);
 
 
 	}
